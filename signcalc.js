@@ -101,7 +101,7 @@ function calcSectAdd(){
     console.log("Start Add item to section list");
     let pieceLengthAdd = 0;
     pieceLengthAdd = document.getElementById("secPieceLength").value;
-    console.log(pieceLengthAdd);
+    console.log("Piece Length Added = " + pieceLengthAdd);
 
    var option = document.createElement("option");
    option.text = pieceLengthAdd;
@@ -125,8 +125,8 @@ function calcSection(){
     console.log("piece length= ",pieceLength);
 
     selectList = document.getElementById("secListBox");
-    console.log(selectList);
-    console.log(selectList.options.length);
+    console.log("Select List = " + selectList);
+    console.log("List Length = " + selectList.options.length);
     
     let linecount = 0;
     let totalMM = 0;
@@ -138,38 +138,43 @@ function calcSection(){
     for (var i=0; i < selectList.options.length; i++){
 
         currentCut = parseFloat(selectList.options[i].value);
-        console.log(currentCut);
+        console.log("Current Cut = " + currentCut);
 
             if ((lengthUsed + currentCut) > sectLength){
                 totalPortion = totalPortion + 1/(sectLength/((sectLength - lengthUsed)+currentCut));
                 lengthUsed = 0;
                 console.log("Path 1")
+                console.log("totalPortion so far = " + totalPortion)
             }
             else if ((lengthUsed + currentCut) == sectLength) {
                 lengthUsed = 0;
                 totalPortion = totalPortion + 1/(sectLength/currentCut);  
-                console.log("Path 2")              
+                console.log("Path 2")    
+                console.log("totalPortion so far = " + totalPortion)          
 
             }
             else if ((lengthUsed + currentCut) < sectLength) {
                 lengthUsed = lengthUsed + currentCut;
                 totalPortion = totalPortion + 1/(sectLength/currentCut);
                 console.log("Path 3")
-
+                console.log("totalPortion so far = " + totalPortion)
             }
             else {
                 alert("oooops something went wrong");
             }
 
+        
         linecount = linecount+1;
         totalMM = totalMM + parseFloat(selectList.options[i].value);
-        totalPortion = totalPortion.toFixed(2);
-        document.getElementById("sectionResult").textContent = "Total Portion = " + totalPortion;
+        
+        
     }
-
+    
+    document.getElementById("sectionResult").textContent = "Total Portion = " + totalPortion;
+    totalPortion = totalPortion.toFixed(2);
     console.log("linecount=",linecount);
     console.log("Total Length=",totalMM);
-    console.log("Total Portion",totalPortion);
+    console.log("Total Portion Final = ",totalPortion);
   
 //End Section Calculations
 }
@@ -203,6 +208,8 @@ function calcSectClear() {
 //End Clear Section List
 }
 
+
+//Start Sheet quick select
 function sheetSelect3x2() {
     document.getElementById("swidth").value = "3000";
     document.getElementById("sheight").value = "2000";
@@ -222,4 +229,29 @@ function sheetSelect2x1() {
     document.getElementById("swidth").value = "2000";
     document.getElementById("sheight").value = "1000";
 }
+//End Sheet quick select
 
+
+//Start Section quick select
+
+let sec6000 = function () {
+    document.getElementById("secLength").value = "6000";
+
+}
+
+let sec5000 = function () {
+    document.getElementById("secLength").value = "5000";
+
+}
+
+let sec3000 = function () {
+    document.getElementById("secLength").value = "3000";
+
+}
+
+let sec1000 = function () {
+    document.getElementById("secLength").value = "1000";
+
+}
+
+//End Section quick select
