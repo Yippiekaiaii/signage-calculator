@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    color:slategray;
+    font-family: Arial;
+}
+
+.header{
+    position: static;
+    height: 100px;
+    width:100%;
+    text-align: left;
+    line-height: 100px;    
+    padding-left:30px;
+    margin-bottom:20px;
+    background-color: slategray ;
+    color:white;    
+
+}
+
+.sideBar{
+    float:left;
+    width:10%;
+    padding: 20px;
+
+}
+
+.sideBar ul{
+    margin:0;
+    padding:0;
+
+}
+
+.sideBar ul li{
+    margin: 0;
+    padding: 0;
+    width:100px;
+    height:20px;    
+    background-color: beige;
+    list-style-type: none;    
+    text-align: center;
+      
+}
+
+.sideBar ul li:hover{
+    background-color: lightblue;
+    -webkit-box-shadow: 0px 4px 5px rgba(50, 50, 50, 0.93);
+    -moz-box-shadow:    0px 4px 5px rgba(50, 50, 50, 0.93);
+    box-shadow:         0px 4px 5px rgba(50, 50, 50, 0.93);
+   
+}
+
+.sideBar ul li a:visited{
+    color: slategray;
+    text-decoration: none;
+    text-transform: uppercase;
+       
+}
+
+.Main {
+    float:left;
+    width:70%;
+}
+
+
+h3{
+    margin-bottom:4px;
+}
+
+/*sheets styling end */
+
+.sheetYield{
+    display:flex;   
+    padding-top:15px;
+    margin-bottom:5px;
+}
+
+.sheetYield p {
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.sheetYield input {
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+}
+
+
+.sheetResults {
+    height:40px;
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+/* Sheet styling end*/
+
+/* sections styling start*/
+
+.sectionsWrapper {
+    display:flex;
+    padding-bottom:5px;
+    padding-top:10px;
+
+}
+
+.sections p {
+    margin-bottom: 5px;
+}
+
+.sections input{
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom: 5px;
+    
+}
+
+.sections button {
+    margin-bottom: 5px;
+}
+
+.sections select {
+    width:100px; 
+    margin-bottom: 5px;   
+}
+
+
+
+
+
+
