@@ -11,53 +11,58 @@
 <body>
 
 
+<div class="mainWrapper">
+
+<!--Left hand Side-->
+<div class="mainLeftWrapper">
+
     <!--Sheet Start-->
+    <div class="sheetYield">
+        <h3>Sheet Yield</h3>
+        <div class="sheetYieldWrapper">  
 
-    <h3>Sheet Yield</h3>
-    <div class="sheetYield">       
+            <div class="column1">
+                <p>Sheet</p>
+                <p>Piece</p>
+            </div>
+                
+            <div class="column2">
+                <input type="text" id="swidth" name="swidth" style="width:50px;">X</input><br>
+                <input type="text" id="pwidth" name="pwidth" style="width:50px;">X</input>
+            </div>
 
-        <div class="column1">
-            <p>Sheet</p>
-            <p>Piece</p>
+            <div class="column3">
+                    <input type="text" id="sheight" name="sheight" style="width:50px;"></input><br>
+                    <input type="text" id="pheight" name="pheight" style="width:50px;"></input>
+            </div>           
+        
+            <div class="column4">
+                <button onclick="calcSheet()">Calculate</button> </br>                 
+            </div>
+
+            <div class="column5">
+                <h5>Sheet Quick Select</h5 >
+                <p onclick="sheetSelect3x2()">3000x2000</p>
+                <p onclick="sheetSelect3x15()">3000x1500</p>
+                <p onclick="sheetSelect24x12()">2440x1220</p>
+                <p onclick="sheetSelect2x1()">2000x1000</p>          
+            </div>   
+
         </div>
-            
-        <div class="column2">
-            <input type="text" id="swidth" name="swidth" style="width:50px;">X</input><br>
-            <input type="text" id="pwidth" name="pwidth" style="width:50px;">X</input>
-        </div>
 
-       <div class="column3">
-             <input type="text" id="sheight" name="sheight" style="width:50px;"></input><br>
-             <input type="text" id="pheight" name="pheight" style="width:50px;"></input>
-       </div>
-             
-      
-
-        <div class="column4">
-            <button onclick="calcSheet()">Calculate</button> </br>                 
-        </div>
-
-        <div class="column5">
-            <h5>Sheet Quick Select</h5 >
-            <p onclick="sheetSelect3x2()">3000x2000</p>
-            <p onclick="sheetSelect3x15()">3000x1500</p>
-            <p onclick="sheetSelect24x12()">2440x1220</p>
-            <p onclick="sheetSelect2x1()">2000x1000</p>        
-    
-        </div>
-     
-    
-    </div>
         <div class="sheetResults">
             <p id="sheetPortion"></p>   
             <p id="sheetYield"></p> 
         </div>
 
-    <!--Sections Start-->
+    </div>
+   
 
-    <h3>Section Yield</h3>
+
+    <!--Sections Start-->
     <div class="sections">   
 
+        <h3>Section Yield</h3>
         <div class="sectionsWrapper">
             <div class = sectColumn1>
                 <p>Section Length</p>
@@ -91,7 +96,22 @@
         
     </div>
     
-          
+</div>
+
+<!--Right hand Side-->
+
+<div class="mainRightWrapper">
+
+    <div class="vinyl">
+        <h3>Vinyl/Roll Materials</h3>
+        <div class="vinylWrapper">
+
+        </div>
+    </div>
+
+</div>
+
+</div>
 
 </body>
 </html>

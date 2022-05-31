@@ -71,18 +71,38 @@ h3{
 
 /*sheets styling end */
 
-.sheetYield{
+.mainWrapper{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.mainLeftWrapper {
+    display:flex;  
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+
+.mainRightWrapper {
+    display:flex;  
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.sheetYieldWrapper{
     display:flex;   
     padding-top:15px;
     margin-bottom:5px;
 }
 
-.sheetYield p {
+.sheetYieldWrapper p {
     padding-right: 5px;
     padding-bottom: 5px;
 }
 
-.sheetYield input {
+.sheetYieldWrapper input {
     margin-left:5px;
     margin-right:5px;
     margin-bottom:5px;
@@ -164,5 +184,12 @@ h3{
 }
 
 
+@media only screen and (max-width:874px) {
 
+    .sideBar  {
+        float:none;
+        width: 100%;
+        
+    }
+}
 
