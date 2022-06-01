@@ -255,3 +255,83 @@ let sec1000 = function () {
 }
 
 //End Section quick select
+
+//Start Vinyl Calculations
+
+let vinylCalc = function () {
+    console.log("Start Vinyl Calculations");
+
+    let rollWidth = document.getElementById("vinRollWidth").value ;
+    let rollLength = 1000;
+    let vpieceWidth = document.getElementById("vinPieceWidth").value ;
+    let vpieceLength = document.getElementById("vinPieceLength").value ; 
+
+    console.log("rollw=", rollWidth, " pieceW=", vpieceWidth, " pieceL=", vpieceLength );
+
+    //test if piece comes out of 1lm
+
+    let rwidthvwidth = rollWidth/vpieceWidth;
+    let rwidthvlength = rollWidth/vpieceLength;
+    console.log("rwidthvwidth=", rwidthvwidth, " rwidthvlength=", rwidthvlength);
+
+    if (rwidthvwidth <1 && rwidthvlength>=1) {
+        let calcW = vpieceWidth/1000;
+        let calcL = (rollWidth/vpieceLength);
+        console.log("Path 1");
+
+        let vinylPortion = calcL/Math.floor(calcW);
+        console.log("VinylPortion=",vinylPortion);
+        document.getElementById("vinylResult").textContent = vinylPortion;
+
+
+    }
+    else if (rwidthvlength <1 && rwidthvwidth>=1) {
+        let calcW = vpieceLength/1000;
+        let calcL = (rollWidth/vpieceWidth);
+        console.log("Path 2");
+
+       
+        let vinylPortion = calcL/Math.floor(calcW);
+        console.log("VinylPortion=",vinylPortion);
+        document.getElementById("vinylResult").textContent = vinylPortion;
+    }    
+    else if (rwidthvlength <1 && rwidthvwidth<1) {
+       
+        console.log("Path 3");
+        let vinylPortion = "Your piece wont fit onto the roll ";
+        console.log("VinylPortion=",vinylPortion);
+        document.getElementById("vinylResult").textContent = vinylPortion;
+
+    }
+    else {
+        console.log("Path 4");        
+        let vOffcutL = Math.trunc(rwidthvlength);
+        let vOffcutW = Math.trunc(rwidthvwidth);
+        console.log("vOffCutW=",vOffcutW," vOffCutL=",vOffcutL);
+
+        if (vOffcutL > vOffcutW)
+        {
+            let calcW = (rollWidth/vpieceWidth);
+            let calcL = 1/(1000/vpieceLength);
+
+            let vinylPortion = calcL/Math.floor(calcW);
+            console.log("VinylPortion=",vinylPortion);
+            document.getElementById("vinylResult").textContent = vinylPortion;
+        }       
+        else {
+            let calcW = (rollWidth/vpieceLength);
+            let calcL = 1/(1000/vpieceWidth);
+            
+            let vinylPortion = calcL/Math.floor(calcW);
+            console.log("VinylPortion=",vinylPortion);
+            document.getElementById("vinylResult").textContent = vinylPortion;
+        }
+      
+
+       
+
+    }  
+
+    
+
+}
