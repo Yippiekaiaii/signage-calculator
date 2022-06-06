@@ -16,7 +16,7 @@ function calcSheet() {
 
     console.log("sWidth=",sheetWidth, " sHeight=", sheetHeight," pWidth=", pieceWidth," pHeight=", pieceHeight);
 
-    //Work out with orientation gives best nest (smallest offcut)
+    //Work out which orientation gives best nest (smallest offcut)
 
     const sratio = [];
     if (sheetWidth > 0 && sheetHeight > 0 && pieceWidth > 0 && pieceHeight > 0) {
@@ -210,48 +210,73 @@ function calcSectClear() {
 
 
 //Start Sheet quick select
-function sheetSelect3x2() {
-    document.getElementById("swidth").value = "3000";
-    document.getElementById("sheight").value = "2000";
+
+let sheetQuickOptions;
+
+function SheetQuickOptions(width,length) {
+    this.width = width;
+    this.length = length;  
 }
 
-function sheetSelect3x15() {
-    document.getElementById("swidth").value = "3000";
-    document.getElementById("sheight").value = "1500";
+let SheetQuickSelect = {
+    setDimentions: function () {
+        getSelectedSize=document.getElementById("sheetSelect").value;
+
+        switch (getSelectedSize) {
+            case "3000x2000":
+                    dimentions = new SheetQuickOptions(3000,2000);
+                    break;
+            case ("3000x1500"):
+                    dimentions = new SheetQuickOptions(3000,1500);
+                    break;
+            case ("2440x1220"):
+                    dimentions = new SheetQuickOptions(2440,1220);
+                    break;
+            case ("2000x1000"):
+                    dimentions = new SheetQuickOptions(2000,1000);
+                    break;
+            default:
+                    dimentions = new SheetQuickOptions("","");
+                    break;
+        }
+
+        console.log(dimentions.width, dimentions.length);
+
+        document.getElementById("swidth").value = dimentions.width;
+        document.getElementById("sheight").value = dimentions.length;
+        
+    }
+
 }
 
-function sheetSelect24x12() {
-    document.getElementById("swidth").value = "2440";
-    document.getElementById("sheight").value = "1220";
-}
-
-function sheetSelect2x1() {
-    document.getElementById("swidth").value = "2000";
-    document.getElementById("sheight").value = "1000";
-}
 //End Sheet quick select
 
 
 //Start Section quick select
 
-let sec6000 = function () {
-    document.getElementById("secLength").value = "6000";
+let sectQuickSelect = function () {
+    getSectionLength = document.getElementById("sectionSelect").value;
+    switch (getSectionLength){
+        case ("6000"):
+            document.getElementById("secLength").value = "6000";
+            break;
+        case ("5000"):
+            document.getElementById("secLength").value = "5000";
+            break;
+        case ("3000"):
+            document.getElementById("secLength").value = "3000";
+            break;
+        case ("2000"):
+            document.getElementById("secLength").value = "2000";
+            break;
+        case ("1000"):
+            document.getElementById("secLength").value = "1000";
+            break;
+        default:
+            document.getElementById("secLength").value = "";
+            break;
 
-}
-
-let sec5000 = function () {
-    document.getElementById("secLength").value = "5000";
-
-}
-
-let sec3000 = function () {
-    document.getElementById("secLength").value = "3000";
-
-}
-
-let sec1000 = function () {
-    document.getElementById("secLength").value = "1000";
-
+    }
 }
 
 //End Section quick select

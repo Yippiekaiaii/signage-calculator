@@ -39,25 +39,23 @@
             <div class="column4">
                 <button onclick="calcSheet()">Calculate</button> </br>                 
             </div>
-
-            <div class="column5">
-                <h5>Sheet Quick Select</h5 >
-                <p onclick="sheetSelect3x2()">3000x2000</p>
-                <p onclick="sheetSelect3x15()">3000x1500</p>
-                <p onclick="sheetSelect24x12()">2440x1220</p>
-                <p onclick="sheetSelect2x1()">2000x1000</p>          
-            </div>   
-
         </div>
+
+        <h5>Sheet Quick Select</h5 >    
+            <select id="sheetSelect" onchange="SheetQuickSelect.setDimentions()">
+            <option>Select a size</option>
+            <option>3000x2000</option>
+            <option>3000x1500</option>
+            <option>2440x1220</option>
+            <option>2000x1000</option>
+        </select>
 
         <div class="sheetResults">
             <p id="sheetPortion"></p>   
             <p id="sheetYield"></p> 
         </div>
 
-    </div>
-   
-
+    </div>  
 
     <!--Sections Start-->
     <div class="sections">   
@@ -77,16 +75,19 @@
                 <button onclick = "calcSectAdd()">Add</button></br> 
             </div>   
 
-            <div class="sectcolumn4">
-                <h5>Section Quick Select</h5 >
-                <p onclick="sec6000()">6000</p>
-                <p onclick="sec5000()">5000</p>
-                <p onclick="sec3000()">3000</p>
-                <p onclick="sec1000()">1000</p>        
-        
-            </div>
-
+           
         </div>
+
+        <h5>Section Quick Select</h5 >                       
+        
+            <select id="sectionSelect" onchange="sectQuickSelect()">
+                <option>Select a size</option>
+                <option>6000</option>
+                <option>5000</option>
+                <option>3000</option>
+                <option>2000</option>
+                <option>1000</option>
+            </select> <br>
 
         <select id="secListBox" name="secListBox" size="6">   
         </select> </br>
