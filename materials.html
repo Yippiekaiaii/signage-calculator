@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <title>Materials</title>
-    <script type = "text/javascript" src = "signcalc.js"></script>
+    
 </head>
 <body>
 
@@ -19,8 +19,9 @@
     <!--Sheet Start-->
     <div class="sheetYield">
         <h3>Sheet Yield</h3>
-        <div class="sheetYieldWrapper">  
 
+        <!-- <div class="sheetYieldWrapper">   -->
+        <div class = contentWrapper>
             <div class="column1">
                 <p>Sheet</p>
                 <p>Piece</p>
@@ -61,7 +62,8 @@
     <div class="sections">   
 
         <h3>Section Yield</h3>
-        <div class="sectionsWrapper">
+        <!-- <div class="sectionsWrapper"> -->
+        <div class = contentWrapper>
             <div class = sectColumn1>
                 <p>Section Length</p>
                 <p>Piece Length</p>
@@ -105,19 +107,21 @@
 
     <div class="vinyl">
         <h3>Vinyl/Roll Materials</h3>
-        <div class="vinylWrapper">
 
+
+        <!-- <div class="vinylWrapper"> -->
+        <div class = contentWrapper>
             <div class="vinylColumn1">
                 <p>Roll Width</p>
                 <p>Piece Size</p>                
             </div>
 
-            <div clsss="vinyl Column2">
+            <div class="vinylColumn2">
                 <input type ="text" id="vinRollWidth" name="vinRollWidth" style="width:50px;"></input><br>
                 <input type ="text" id="vinPieceWidth" name="inPieceWidth" style = "width:50px">X</input> <input type ="text" id="vinPieceLength" name="vinPieceLength" style="width:50px;"></input><br>
             </div>
 
-            <div clsss="vinyl Column3">
+            <div class="vinylColumn3">
                 <button onclick = "vinylCalc()">Calculate</button></br> 
                 <button onclick = "vinylRemove()" style="width:59.55px">Clear</button></br> 
             </div>
@@ -133,4 +137,7 @@
 </div>
 
 </body>
+
+<script type = "text/javascript" src = "signcalc.js"></script>
+
 </html>

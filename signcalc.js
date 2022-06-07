@@ -350,13 +350,62 @@ let vinylCalc = function () {
             let vinylPortion = calcL/Math.floor(calcW);
             console.log("VinylPortion=",vinylPortion);
             document.getElementById("vinylResult").textContent = vinylPortion;
-        }
-      
+        }            
 
-       
+    }      
 
-    }  
+}
+
+// Start router cut text calculations
+
+let routerTextCalc = function() {
+        let getRoutText = document.getElementById("routText").value;
+        let getRoutHeight = document.getElementById("routHeight").value;
+        let getRoutThickness = document.getElementById("routThickness").value;
+        let getRoutFlange = document.querySelector('#routFlange').checked
+
+        console.log("Router input=", getRoutText,getRoutHeight,getRoutThickness,getRoutFlange);
 
     
 
+        // use / /g to remove all spaces from the string
+        let textNoSpaces = getRoutText.replace(/ /g, "");
+        // get the length of the string after removal
+        let letterCount = textNoSpaces.length;
+        console.log("Letter Count=",letterCount);
+
+        let passCount = Math.ceil(getRoutThickness /5);
+
+        if (getRoutFlange==true) {
+            passCount=passCount+1;
+        } 
+        console.log("Pass Count=",passCount);
+
+        let loadTime = 15; //in mins
+        let cutSpeed = 10; //in mm per second
+        let passLength = (getRoutHeight*7)*letterCount;
+        let passTime = ((passLength)/cutSpeed)/60; //now converted to mins
+        let totalTime = (passTime * passCount)+loadTime;
+
+        totalTime = Math.round(totalTime);
+
+        document.getElementById("routLettersAnswer").innerHTML = "Cut Time =" + Math.round(passTime * passCount) + "<br>Load Time =" + loadTime + "<br>Total Time = "+ totalTime;
+
+
+}
+
+// end router cut text calculations
+
+//Metalshop start Calculations
+
+let metalShopCalc = function() {
+        let getWeldCount = document.getElementById("metalShopWelds").value;
+        let getFoldCount = document.getElementById("metalShopFolds").value;
+        const foldTime = 5;
+        const weldTime = 10;
+
+        let totalWeldTime = weldTime * getWeldCount;
+        let totalFoldTime = foldTime * getFoldCount;
+
+        document.getElementById("metalShopResults").innerHTML = "Total Weld Time =" + totalWeldTime + "<br>Total Fold Time="+ totalFoldTime + "<br>Total Overall Time=" + (totalFoldTime+totalWeldTime);
 }

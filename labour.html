@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <title>Labour</title>
-    <script type = "text/javascript" src = "signcalc.js"></script>
+    
 </head>
 
 <body>
@@ -15,9 +15,12 @@
     <!--Left hand Side-->
     <div class="mainLeftWrapper">
 
+        <!-- Router Cutting  -->
         <div class = "routerTiming">
             <h3>Router Cutter Timing</h3>
-            <div class = "routerTimingWrapper">             
+          
+            <!-- <div class = "routerTimingWrapper">   -->
+                <div class = contentWrapper>           
                 <div class="routerColumn1">
                     <p>Text to Router</p>
                     <p>Letter Height</p>
@@ -26,29 +29,56 @@
                 </div>
 
                 <div class="routerColumn2">
-                    <input type="text" id="routText" name="routText" style="width:50px;"></input><br>
+                    <input type="text" id="routText" name="routText" style="width:100px;"></input><br>
                     <input type="text" id="routHeight" name="routHeight" style="width:50px;"></input><br>
                     <input type="text" id="routThickness" name="routThickness" style="width:50px;"></input><br>
                     <input type="checkbox" id="routFlange" name="routFlange"></input>
                 </div>
 
                 <div class="routerColumn3">
-                    
-                
+                    <button onclick = "routerTextCalc()">Calculate</button>
                 </div>
 
             </div>
+        <p id="routLettersAnswer"></p>
         </div>
+
+        <!-- Metal Shop  -->
+        <div class = "metalShop">            
+            <h3>Metal Shop Timing</h3>
+           
+            <!-- <div class = "metalShopWrapper"> -->
+            <div class = contentWrapper>
+                <div class = "metalShopColumn1">
+                    <p>Folds</p>
+                    <p>Welds</p>
+                </div>
+
+                <div class = "metalShopColumn2">
+                    <input type="text" id="metalShopFolds" name="metalShopFolds" style="width:50px;"></input><br>
+                    <input type="text" id="metalShopWelds" name="metalShopWelds" style="width:50px;"></input><br>
+                </div>
+
+                <div class = "metalShopColumn3">
+                    <button onclick = "metalShopCalc()">Calculate</button>
+                 
+                </div>
+
+            </div>
+            <p id="metalShopResults"></p>
+        </div> 
 
     </div>
 
     <!--Right hand Side-->
-    <div class="mainRightWrapper">
+        <div class="mainRightWrapper">
 
-
-    </div>
+        </div>
 
     </div>
 
 </body>
+
+<script type = "text/javascript" src = "signcalc.js"></script>
+
 </html>
