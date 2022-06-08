@@ -231,6 +231,13 @@ h3{
         height: 50px;
     }
 
+    .slidingNav {       
+        left:0;   
+        margin-left:0px;        
+        height: 400px;     
+       
+    }
+
     .sideBar ul{
        
         display:flex;
