@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Sheet</title>
+    
+</head>
+<body>
+
+
+    <!--Sheet Start-->
+    <div class="sheetYield">
+        <h3>Sheet Yield</h3>
+
+        <!-- <div class="sheetYieldWrapper">   -->
+        <div class = contentWrapper>
+            <div class="column1">
+                <p>Sheet</p>
+                <p>Piece</p>
+            </div>
+                
+            <div class="column2">
+                <input type="text" id="swidth" name="swidth" style="width:50px;">X</input><br>
+                <input type="text" id="pwidth" name="pwidth" style="width:50px;">X</input>
+            </div>
+
+            <div class="column3">
+                    <input type="text" id="sheight" name="sheight" style="width:50px;"></input><br>
+                    <input type="text" id="pheight" name="pheight" style="width:50px;"></input>
+            </div>           
+        
+            <div class="column4">
+                <button onclick="calcSheet()">Calculate</button> </br>                 
+            </div>
+        </div>
+
+        <h5>Sheet Quick Select</h5 >    
+            <select id="sheetSelect" onchange="SheetQuickSelect.setDimentions()">
+            <option>Select a size</option>
+            <option>3000x2000</option>
+            <option>3000x1500</option>
+            <option>2440x1220</option>
+            <option>2000x1000</option>
+        </select>
+
+        <div class="sheetResults">
+            <p id="sheetPortion"></p>   
+            <p id="sheetYield"></p> 
+        </div>
+
+    </div>  
+
+</body>
+
+<script type = "text/javascript" src = "signcalc.js"></script>
+
+</html>

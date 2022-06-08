@@ -1,4 +1,6 @@
 
+
+
 function calcSheet() {
 
 //Start Sheet Calculations
@@ -409,3 +411,58 @@ let metalShopCalc = function() {
 
         document.getElementById("metalShopResults").innerHTML = "Total Weld Time =" + totalWeldTime + "<br>Total Fold Time="+ totalFoldTime + "<br>Total Overall Time=" + (totalFoldTime+totalWeldTime);
 }
+
+//open slide menu
+
+let menuHoverMaterials = false;
+let menuHoverLabour = false;
+let menuOpenStatus = false;
+
+let SlideMenu = {
+
+    setMenuHoverMaterials: function() {                    
+            menuHoverMaterials = true;
+            menuHoverLabour = false;
+            this.slideMenuOpen();
+           
+    },  
+    setMenuHoverLabour: function() {
+            menuHoverLabour = true;
+            menuHoverMaterials = false; 
+            this.slideMenuOpen();                   
+            
+    },    
+
+    slideMenuOpen: function() {    
+
+
+                    if (menuOpenStatus == false) {
+                        getSlideMenu = document.querySelector(".slidingNav");
+                        getSlideMenu.style.visibility = "visible";      
+                        getSlideMenu.style.width = "300px";                      
+                        menuOpenStatus = true;
+                    }
+
+                    if (menuHoverMaterials == true){
+                        document.getElementById("slidingNavUL").innerHTML = "<li><span>Select Option</span></li><li><a href='#' onclick='sheetLoad()'>Sheet Yield</a></li><li><a href='#' onclick='sectionLoad()'>Section Yield</a></li><li><a href='#' onclick='vinylLoad()'>Vinyl/Roll Materials</a></li>";
+                    }
+
+                    if (menuHoverLabour == true){
+                        document.getElementById("slidingNavUL").innerHTML = "<li><span>Select Option</span></li><li><a href='#' onclick='routerLoad()'>Router Cutting</a></li><li><a href='#' onclick='metalshopLoad()'>Metal Shop</a></li>";
+                    }
+         },
+
+    slideMenuClose: function() {        
+            if (menuOpenStatus == true) {
+                getSlideMenu = document.querySelector(".slidingNav");   
+                getSlideMenu.style.visibility = "hidden"; 
+                getSlideMenu.style.width = "0px";
+        
+                menuOpenStatus = false;
+                menuHoverMaterials = false;
+                menuHoverLabour = false;
+            }
+        }
+
+}
+

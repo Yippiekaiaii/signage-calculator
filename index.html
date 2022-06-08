@@ -18,15 +18,24 @@
         <div class="sideBar">
             
             <ul>
-                <li onclick="materials()">Materials</li>
-                <li onclick="labour()">Labour</a></li>
+                <li id= "materialsListItem" onclick="materials()" onmouseover="SlideMenu.setMenuHoverMaterials()">Materials</li>
+                <li id= "labourListItem" onclick="labour()" onmouseover="SlideMenu.setMenuHoverLabour()">Labour</li>
             </ul>
+        </div>
+
+        <div class="slidingNav" onmouseleave="SlideMenu.slideMenuClose()">
+            <ul id="slidingNavUL">
+                
+            </ul>
+
         </div>
 
         <div class="Main">
             <!--Content inside this <p> will be replaced by jquery with seperate HTML file-->           
             <p id="content"></p> 
         </div>
+
+
         
            <script>
             function materials() {
@@ -39,8 +48,35 @@
                $("#content").load("labour.html");
                      
             }
+
+            function sheetLoad() {               
+               $("#content").load("sheetyield.html");
+               SlideMenu.slideMenuClose();                     
+            }
+
+            function sectionLoad() {               
+               $("#content").load("sectionyield.html");
+               SlideMenu.slideMenuClose();                     
+            }
+
+            function vinylLoad() {               
+               $("#content").load("vinylyield.html");
+               SlideMenu.slideMenuClose();                     
+            }
+
+            function routerLoad() {               
+               $("#content").load("router.html");
+               SlideMenu.slideMenuClose();                     
+            }
+
+            function metalshopLoad() {               
+               $("#content").load("metalshop.html");
+               SlideMenu.slideMenuClose();                     
+            }
+
         </script>
 
+        <script src="signcalc.js"></script>
         
 
     </body>

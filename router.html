@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Router</title>
+    
+</head>
+
+<body>
+        <!-- Router Cutting  -->
+        <div class = "routerTiming">
+            <h3>Router Cutter Timing</h3>
+          
+            <!-- <div class = "routerTimingWrapper">   -->
+                <div class = contentWrapper>           
+                <div class="routerColumn1">
+                    <p>Text to Router</p>
+                    <p>Letter Height</p>
+                    <p>Material Thickness</p>
+                    <p>Shoulder</p>
+                </div>
+
+                <div class="routerColumn2">
+                    <input type="text" id="routText" name="routText" style="width:100px;"></input><br>
+                    <input type="text" id="routHeight" name="routHeight" style="width:50px;"></input><br>
+                    <input type="text" id="routThickness" name="routThickness" style="width:50px;"></input><br>
+                    <input type="checkbox" id="routFlange" name="routFlange"></input>
+                </div>
+
+                <div class="routerColumn3">
+                    <button onclick = "routerTextCalc()">Calculate</button>
+                </div>
+
+            </div>
+        <p id="routLettersAnswer"></p>
+        </div>
+
+       
+</body>
+
+<script type = "text/javascript" src = "signcalc.js"></script>
+
+</html>

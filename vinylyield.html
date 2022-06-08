@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Vinyl</title>
+    
+</head>
+<body>
+
+    <div class="vinyl">
+        <h3>Vinyl/Roll Materials</h3>
+
+
+        <!-- <div class="vinylWrapper"> -->
+        <div class = contentWrapper>
+            <div class="vinylColumn1">
+                <p>Roll Width</p>
+                <p>Piece Size</p>                
+            </div>
+
+            <div class="vinylColumn2">
+                <input type ="text" id="vinRollWidth" name="vinRollWidth" style="width:50px;"></input><br>
+                <input type ="text" id="vinPieceWidth" name="inPieceWidth" style = "width:50px">X</input> <input type ="text" id="vinPieceLength" name="vinPieceLength" style="width:50px;"></input><br>
+            </div>
+
+            <div class="vinylColumn3">
+                <button onclick = "vinylCalc()">Calculate</button></br> 
+                <button onclick = "vinylRemove()" style="width:59.55px">Clear</button></br> 
+            </div>
+            
+        </div>
+        
+    </div>
+    <p id="vinylResult"></p>
+
+</body>
+
+<script type = "text/javascript" src = "signcalc.js"></script>
+
+</html>
