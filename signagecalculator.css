@@ -29,10 +29,6 @@ button {
     filter:drop-shadow(1px 1px 2px black)
 }
 
-#content {
-    
-}
-
 .header{
     position: static;
     height: 100px;
@@ -123,6 +119,17 @@ button {
 
 .slidingNav ul li{       
     padding-bottom: 10px;   
+}
+
+.slidingNav ul li span{   
+    color:black;
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
+.slidingNav ul li a:hover{
+    color: black;   
+   
 }
 
 .Main {

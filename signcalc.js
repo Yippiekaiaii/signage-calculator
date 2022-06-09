@@ -437,10 +437,12 @@ let SlideMenu = {
 
 
                     if (menuOpenStatus == false) {
+                                                
                         getSlideMenu = document.querySelector(".slidingNav");
                         getSlideMenu.style.visibility = "visible";      
                         getSlideMenu.style.width = "300px";                      
                         menuOpenStatus = true;
+                       
                     }
 
                     if (menuHoverMaterials == true){
@@ -454,9 +456,21 @@ let SlideMenu = {
 
     slideMenuClose: function() {        
             if (menuOpenStatus == true) {
-                getSlideMenu = document.querySelector(".slidingNav");   
+
+                getSlideMenuLink = document.querySelectorAll(".slidingNav ul li a");
+                console.log(getSlideMenuLink);
+                arrayLength = getSlideMenuLink.length;
+                for (let i=0; i < arrayLength; i++){
+                     getSlideMenuLink[i].style.visibility = "hidden";  
+                }
+
+                getSlideMenuSpan = document.querySelector(".slidingNav ul li span");
+                getSlideMenu = document.querySelector(".slidingNav");                
+                getSlideMenuSpan.style.visibility = "hidden";
                 getSlideMenu.style.visibility = "hidden"; 
                 getSlideMenu.style.width = "0px";
+               
+
         
                 menuOpenStatus = false;
                 menuHoverMaterials = false;

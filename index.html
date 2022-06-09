@@ -32,44 +32,51 @@
 
         <div class="Main">
             <!--Content inside this <p> will be replaced by jquery with seperate HTML file-->           
-            <p id="content"></p> 
+            <p id="content"><p id="homeText">Please use the menu to select the type of calculation required</p></p> 
         </div>
 
 
         
            <script>
             function materials() {
+                document.getElementById("#homeText").visibility = "hidden";
                console.log('Materials Script start'); 
                $("#content").load("materials.html");
             }
 
             function labour() {
+                document.getElementById("#homeText").visibility = "hidden";
                console.log('Labour Script start'); 
                $("#content").load("labour.html");
                      
             }
 
-            function sheetLoad() {               
+            function sheetLoad() {   
+                document.getElementById("#homeText").visibility = "hidden";            
                $("#content").load("sheetyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
-            function sectionLoad() {               
+            function sectionLoad() {   
+                document.getElementById("#homeText").visibility = "hidden";            
                $("#content").load("sectionyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
-            function vinylLoad() {               
+            function vinylLoad() {  
+                document.getElementById("#homeText").visibility = "hidden";             
                $("#content").load("vinylyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
-            function routerLoad() {               
+            function routerLoad() {  
+                document.getElementById("#homeText").visibility = "hidden";             
                $("#content").load("router.html");
                SlideMenu.slideMenuClose();                     
             }
 
-            function metalshopLoad() {               
+            function metalshopLoad() {   
+                document.getElementById("#homeText").visibility = "hidden";            
                $("#content").load("metalshop.html");
                SlideMenu.slideMenuClose();                     
             }
