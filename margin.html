@@ -9,28 +9,30 @@
 </head>
 
 <body>
-    <h3>Margin</h3>       
+    <h3>Margin & Mark Up</h3>           
     <div class="Margin">
 
         <div class="contentWrapper">
             <div class = "scaleColumn" >
-                <p>Anotation Dim</p>
-                <p>Measure of Anotated length</p>
-                <p>Measure of length to scale</p>
+                <p>Cost</p>
+                <p>Sell</p>
+                <p>Margin</p>
+                <p>Markup</p>
             </div>
 
             <div class = "scaleColumn">
-                <input type="text" id="knownSize" style="width:80px;"><br>
-                <input type="text" id="pageMeasureSize" style="width:80px;"><br>           
-                <input type="text" id="itemToScaleSize" style="width:80px;"><br>
+                <input type ="text" id="cost" name="cost" style="width:50px;"></input><br>
+                <input type ="text" id="sell" name="sell" style = "width:50px"></input><br>
+                <input type ="text" id="margin" name="margin" style="width:50px;"></input><br>
+                <input type ="text" id="markup" name="markup" style = "width:50px"></input><br>    
             </div>   
             
             <div class = "scaleColumn">
-                <button onclick="scalingCalc()">Calculate</button>                
+                <button onclick="marginCalc()">Calculate</button>                
             </div>   
         </div>
   
-    <p id="scaleResult"></p>    
+    <p id="marginResult"></p>    
     </div>   
 </body>
 

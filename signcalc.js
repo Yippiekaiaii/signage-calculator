@@ -484,7 +484,7 @@ let SlideMenu = {
                     }
 
                     if (menuHoverGeneral == true){
-                        document.getElementById("slidingNavUL").innerHTML = "<li><span>Select Option</span></li><li><a href='#' onclick=''>Margin & Markup</a></li><li><a href='#' onclick='scalingLoad()'>Scale</a></li>";
+                        document.getElementById("slidingNavUL").innerHTML = "<li><span>Select Option</span></li><li><a href='#' onclick='marginLoad()'>Margin & Markup</a></li><li><a href='#' onclick='scalingLoad()'>Scale</a></li>";
                     }
          },
 
