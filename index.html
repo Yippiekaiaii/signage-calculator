@@ -39,44 +39,51 @@
         
            <script>
             function materials() {
-                document.getElementById("#homeText").visibility = "hidden";
+                document.getElementById("homeText").style = "visibility:hidden;";
+                console.log(document.getElementById("homeText").innerHTML);
                console.log('Materials Script start'); 
                $("#content").load("materials.html");
             }
 
             function labour() {
-                document.getElementById("#homeText").visibility = "hidden";
+                document.getElementById("homeText").style = "visibility:hidden;";
+                console.log(document.getElementById("homeText").innerHTML);
                console.log('Labour Script start'); 
                $("#content").load("labour.html");
                      
             }
 
             function sheetLoad() {   
-                document.getElementById("#homeText").visibility = "hidden";            
+                document.getElementById("homeText").style = "visibility:hidden;";  
+                console.log(document.getElementById("homeText").innerHTML);        
                $("#content").load("sheetyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function sectionLoad() {   
-                document.getElementById("#homeText").visibility = "hidden";            
+                document.getElementById("homeText").style = "visibility:hidden;";   
+               console.log(document.getElementById("homeText").innerHTML);       
                $("#content").load("sectionyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function vinylLoad() {  
-                document.getElementById("#homeText").visibility = "hidden";             
+                document.getElementById("homeText").style = "visibility:hidden;"; 
+               console.log(document.getElementById("homeText").innerHTML);      
                $("#content").load("vinylyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function routerLoad() {  
-                document.getElementById("#homeText").visibility = "hidden";             
+                document.getElementById("homeText").style = "visibility:hidden;"; 
+               console.log(document.getElementById("homeText").innerHTML);       
                $("#content").load("router.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function metalshopLoad() {   
-                document.getElementById("#homeText").visibility = "hidden";            
+                document.getElementById("homeText").style = "visibility:hidden;";   
+                console.log(document.getElementById("homeText").innerHTML);       
                $("#content").load("metalshop.html");
                SlideMenu.slideMenuClose();                     
             }
