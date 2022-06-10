@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Scale</title>
+    
+</head>
+
+<body>
+    <h3>Scaling</h3>       
+    <div class="scaling">
+
+        <div class="contentWrapper">
+            <div class = "scaleColumn" >
+                <p>Anotation Dim</p>
+                <p>Measure of Anotated length</p>
+                <p>Measure of length to scale</p>
+            </div>
+
+            <div class = "scaleColumn">
+                <input type="text" id="knownSize" style="width:80px;"><br>
+                <input type="text" id="pageMeasureSize" style="width:80px;"><br>           
+                <input type="text" id="itemToScaleSize" style="width:80px;"><br>
+            </div>   
+            
+            <div class = "scaleColumn">
+                <button onclick="scalingCalc()">Calculate</button>
+            </div>   
+        </div>
+  
+    <p id="scaleResult"></p>    
+    </div>   
+</body>
+
+<script type = "text/javascript" src = "signcalc.js"></script>
+
+</html>

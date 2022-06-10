@@ -20,6 +20,7 @@
             <ul>
                 <li id= "materialsListItem" onmouseover="SlideMenu.setMenuHoverMaterials()">Materials</li>
                 <li id= "labourListItem" onmouseover="SlideMenu.setMenuHoverLabour()">Labour</li>
+                <li id= "generalListItem" onmouseover="SlideMenu.setMenuHoverGeneral()">General</li>
             </ul>
         </div>
 
@@ -34,57 +35,54 @@
             <!--Content inside this <p> will be replaced by jquery with seperate HTML file-->           
             <p id="content"><p id="homeText">Please use the menu to select the type of calculation required</p></p> 
         </div>
-
-
         
            <script>
             function materials() {
-                document.getElementById("homeText").style = "visibility:hidden;";
-                console.log(document.getElementById("homeText").innerHTML);
+                document.getElementById("homeText").style = "visibility:hidden;";                
                console.log('Materials Script start'); 
                $("#content").load("materials.html");
             }
 
             function labour() {
-                document.getElementById("homeText").style = "visibility:hidden;";
-                console.log(document.getElementById("homeText").innerHTML);
+                document.getElementById("homeText").style = "visibility:hidden;";                
                console.log('Labour Script start'); 
                $("#content").load("labour.html");
                      
             }
 
             function sheetLoad() {   
-                document.getElementById("homeText").style = "visibility:hidden;";  
-                console.log(document.getElementById("homeText").innerHTML);        
+                document.getElementById("homeText").style = "visibility:hidden;";                      
                $("#content").load("sheetyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function sectionLoad() {   
-                document.getElementById("homeText").style = "visibility:hidden;";   
-               console.log(document.getElementById("homeText").innerHTML);       
+                document.getElementById("homeText").style = "visibility:hidden;";                     
                $("#content").load("sectionyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function vinylLoad() {  
-                document.getElementById("homeText").style = "visibility:hidden;"; 
-               console.log(document.getElementById("homeText").innerHTML);      
+                document.getElementById("homeText").style = "visibility:hidden;";                 
                $("#content").load("vinylyield.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function routerLoad() {  
-                document.getElementById("homeText").style = "visibility:hidden;"; 
-               console.log(document.getElementById("homeText").innerHTML);       
+                document.getElementById("homeText").style = "visibility:hidden;";                    
                $("#content").load("router.html");
                SlideMenu.slideMenuClose();                     
             }
 
             function metalshopLoad() {   
-                document.getElementById("homeText").style = "visibility:hidden;";   
-                console.log(document.getElementById("homeText").innerHTML);       
+                document.getElementById("homeText").style = "visibility:hidden;";                       
                $("#content").load("metalshop.html");
+               SlideMenu.slideMenuClose();                     
+            }
+
+            function scalingLoad() {   
+                document.getElementById("homeText").style = "visibility:hidden;";                       
+               $("#content").load("scale.html");
                SlideMenu.slideMenuClose();                     
             }
 

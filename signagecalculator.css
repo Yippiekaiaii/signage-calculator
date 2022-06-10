@@ -140,6 +140,10 @@ button {
     
 }
 
+#homeText {
+    padding-top:40px;
+}
+
 .mainWrapper{
     display:flex;
     flex-direction: row;

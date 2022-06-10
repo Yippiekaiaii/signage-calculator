@@ -398,7 +398,7 @@ let routerTextCalc = function() {
 
 // end router cut text calculations
 
-//Metalshop start Calculations
+//Metalshop Calculations  start 
 
 let metalShopCalc = function() {
         let getWeldCount = document.getElementById("metalShopWelds").value;
@@ -411,11 +411,31 @@ let metalShopCalc = function() {
 
         document.getElementById("metalShopResults").innerHTML = "Total Weld Time =" + totalWeldTime + "<br>Total Fold Time="+ totalFoldTime + "<br>Total Overall Time=" + (totalFoldTime+totalWeldTime);
 }
+//Metalshop Calculations End 
+
+//Scaling calculations start 
+
+let scalingCalc = function() {
+
+    let getKownSize = document.querySelector("#knownSize").value;
+    let getPageMeasureSize = document.querySelector("#pageMeasureSize").value;
+    let getItemToScaleSize = document.querySelector("#itemToScaleSize").value;
+
+    let scale = getKownSize/getPageMeasureSize;
+    let scaledSize = scale * getItemToScaleSize;
+    
+    document.getElementById("scaleResult").innerHTML = "Scale = 1/" + scale + "<br> Scaled Measure = " +scaledSize;
+
+}
+
+//Scaling calculations end
+
 
 //open slide menu
 
 let menuHoverMaterials = false;
 let menuHoverLabour = false;
+let menuHoverGeneral = false;
 let menuOpenStatus = false;
 
 let SlideMenu = {
@@ -423,15 +443,25 @@ let SlideMenu = {
     setMenuHoverMaterials: function() {                    
             menuHoverMaterials = true;
             menuHoverLabour = false;
+            menuHoverGeneral = false;
             this.slideMenuOpen();
            
     },  
     setMenuHoverLabour: function() {
             menuHoverLabour = true;
-            menuHoverMaterials = false; 
+            menuHoverMaterials = false;
+            menuHoverGeneral = false; 
             this.slideMenuOpen();                   
             
     },    
+
+    setMenuHoverGeneral: function() {
+        menuHoverGeneral = true;
+        menuHoverLabour = false; 
+        menuHoverMaterials = false; 
+        this.slideMenuOpen();                   
+        
+},    
 
     slideMenuOpen: function() {    
 
@@ -451,6 +481,10 @@ let SlideMenu = {
 
                     if (menuHoverLabour == true){
                         document.getElementById("slidingNavUL").innerHTML = "<li><span>Select Option</span></li><li><a href='#' onclick='routerLoad()'>Router Cutting</a></li><li><a href='#' onclick='metalshopLoad()'>Metal Shop</a></li>";
+                    }
+
+                    if (menuHoverGeneral == true){
+                        document.getElementById("slidingNavUL").innerHTML = "<li><span>Select Option</span></li><li><a href='#' onclick=''>Margin & Markup</a></li><li><a href='#' onclick='scalingLoad()'>Scale</a></li>";
                     }
          },
 
@@ -475,6 +509,7 @@ let SlideMenu = {
                 menuOpenStatus = false;
                 menuHoverMaterials = false;
                 menuHoverLabour = false;
+                menuHoverGeneral = false;
             }
         }
 
