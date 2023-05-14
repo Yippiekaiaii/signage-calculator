@@ -10,7 +10,7 @@
 
 <body>
     <h3>Margin & Mark Up</h3>  
-    <p class="description">Enter a combination of 3 of the below to get the missing value</p>         
+    <p class="description">Enter a combination of 2 of the below to get the missing values</p>         
     <div class="Margin">
 
         <div class="contentWrapper">
@@ -22,14 +22,14 @@
             </div>
 
             <div class = "scaleColumn">
-                <input type ="text" id="cost" name="cost" style="width:50px;"></input><br>
-                <input type ="text" id="sell" name="sell" style = "width:50px"></input><br>
-                <input type ="text" id="margin" name="margin" style="width:50px;"></input><br>
-                <input type ="text" id="markup" name="markup" style = "width:50px"></input><br>    
+                <input type ="text" id="cost" class="margin_input" name="cost"></input><br>
+                <input type ="text" id="sell" class="margin_input" name="sell"></input><br>
+                <input type ="text" id="margin" class="margin_input" name="margin"></input><br>
+                <input type ="text" id="markup" class="margin_input" name="markup"></input><br>    
             </div>   
             
             <div class = "scaleColumn">
-                <button onclick="marginCalc()">Calculate</button>                
+                <button onclick="marginCalc()" class="margin_btn">Calculate</button>                
             </div>   
         </div>
   

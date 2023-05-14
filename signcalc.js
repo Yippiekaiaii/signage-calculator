@@ -430,6 +430,77 @@ let scalingCalc = function() {
 
 //Scaling calculations end
 
+//Margin Calculations start
+
+let marginCalc = function() {
+    let getCost = document.querySelector("#cost").value;
+    let getSell = document.querySelector("#sell").value;
+    let getMargin = document.querySelector("#margin").value;
+    let getMarkup = document.querySelector("#markup").value;
+
+    let cost
+    let sell
+    let markup
+    let margin
+
+    //Calc Margin from cost and sell
+    if (getCost && getSell) {
+        margin = ((getSell-getCost)/getSell)*100  
+        margin = margin.toFixed(2)     
+    }
+
+    //Calc Markup from cost and sell
+    if (getCost && getSell) {
+        markup = ((getSell-getCost)/getCost)*100  
+        markup = markup.toFixed(2)     
+    }
+
+    //Calc sell from cost and margin
+    if (getCost && getMargin){
+        sell = getCost/(1-(getMargin/100)) 
+        sell = sell.toFixed(2)       
+    }
+
+    //Calc sell from cost and markup
+    if (getCost && getMarkup){
+        sell = getCost*(1+(getMarkup/100))    
+        sell = sell.toFixed(2)  
+    }
+
+    //Calc cost from sell and margin
+    if (getSell && getMargin){
+        cost = getSell*(1-(getMargin/100))  
+        cost = cost.toFixed(2)     
+    }
+
+    //Calc cost from sell and markup
+    if (getSell && getMarkup){
+        cost = getSell/(1+(getMarkup/100))  
+        cost = cost.toFixed(2)     
+    }
+
+    
+    let result=""
+
+    if (margin) {       
+        result = result + "<p>Margin = "+margin+"%</p>"
+    }
+    if (markup) {        
+        result = result + "<p>Markup = "+markup+"%</p>"
+    }
+    if (cost) {      
+        result = result + "<p>Cost= "+cost+"</p>"
+    }
+    if (sell){        
+        result = result + "<p>Sell= "+sell+"</p>"
+    }
+
+    document.getElementById("marginResult").innerHTML = result;
+
+    
+}
+
+//Margin Calculations end
 
 //open slide menu
 

@@ -75,11 +75,11 @@ button {
 }
 
 .sideBar ul li:hover{
-    background-color: lightblue;
+    background-color: rgb(51,50,50);
     -webkit-box-shadow: 0px 4px 5px rgba(50, 50, 50, 0.93);
     -moz-box-shadow:    0px 4px 5px rgba(50, 50, 50, 0.93);
     box-shadow:         0px 4px 5px rgba(50, 50, 50, 0.93);
- 
+    color:white;
 }
 
 .sideBar ul li a:visited{
@@ -220,14 +220,19 @@ h3{
 }
 
 
-/* Set styling based on classes containing a string */
-
- /* div[class*="Column"], div[class*="column"]{
-    background: #ffff00;
- 
-  } */
+/*Margin & Markup Styling start */
 
 
+/*Margin & Markup Styling end */
+
+.margin_input{
+    width: 80px;
+    text-align: right;
+}
+
+#marginResult {
+    margin-top:20px;
+}
 
 /*Start mobile device styling*/
 
